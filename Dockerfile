@@ -9,7 +9,7 @@ ARG DOCKER_COMPOSE_VERSION="1.24.0"
 RUN \
     apt update && \
     apt install -y --no-install-recommends \
-    python3-pip=9.0.1-2 \
+    python3-pip \
     apt-transport-https=1.4.9 \
     ca-certificates \
     curl=7.52.1-5+deb9u9 \
