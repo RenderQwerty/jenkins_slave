@@ -34,10 +34,10 @@ RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
 
 # install ansible and required python modules
 COPY requirements.txt /tmp/
-
 RUN \
     pip3 install ${PIP_OPTIONS} setuptools && \
     pip3 install ${PIP_OPTIONS} -r /tmp/requirements.txt
+
 RUN mkdir /home/jenkins.ssh/ && \
     touch /home/jenkins/.ssh/known_hosts && \
     ssh-keyscan bastion.dev.internalone.com > /home/jenkins/.ssh/known_hosts
